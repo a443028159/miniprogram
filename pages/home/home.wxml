@@ -1,3 +1,5 @@
 <!--pages/home/home.wxml-->
 <text class="t">我是内容区</text>
-<button size="mini">确认 {{console.log(1)}}</button>
+<button size="mini">确认 </button>
+
+<view>01tag</view>
