@@ -1,3 +1,15 @@
 <!--pages/home/home.wxml-->
 <text class="t">我是内容区</text>
 <button size="mini">确认 {{console.log(1)}}</button>
+
+<view wx:for="{{arr}}" >{{item.id}}-{{item.name}}</view>
+
+<view>{{count}}</view>
+<button size="mini" bindtap="add">+</button>
+<button size="mini" bindtap="sub">-</button>
+
+<button size='mini' open-type="getUserInfo" bindgetuserinfo="getInfo">获取用户数据</button>
+
+<open-data type="userAvatarUrl"></open-data>
+
+<view wx:for="{{items}}">{{item.name}}</view>

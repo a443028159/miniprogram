@@ -1,31 +1,13 @@
-// pages/home/home.js
+// pages/about/about.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    arr:[
-      {id:1,name:"a"},
-      {id:2,name:"b"},
-      {id:3,name:"c"},
-    ],
-    count:0,
     items:[]
   },
-  add(){
-    this.setData({
-      count: this.data.count+1
-    })
-  },
-  sub(){
-    this.setData({
-      count:this.data.count - 1
-    })
-  },
-  getInfo(e){
-    console.log(e)
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -35,12 +17,14 @@ Page({
       success: (res) => {
         console.log(res)
         this.setData({
-          items: res.data
+          items:res.data
         })
       }
     })
   },
-
+  onPullDownRefresh(e){
+    console.log("下拉事件")
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -88,11 +72,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  onPageScroll(obj) {
-    console.log(obj)
-  },
-  onPullDownRefresh(){
-    console.log("页面下拉了")
   }
 })
